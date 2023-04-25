@@ -1,0 +1,21 @@
+.menu-opacity, .feedback-opacity, .callback-opacity {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  width: 1500px;
+  height: 100%;
+  background-color: $bgColor;
+  opacity: 0.8;
+}
+
+.menu-opacity {
+  left: 306px;
+}
+
+.feedback-opacity, .callback-opacity {
+  right: 320px;
+  @media screen and (min-width: 720px) {
+    right: 440px;
+  }
+}

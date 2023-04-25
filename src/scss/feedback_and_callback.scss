@@ -1,0 +1,101 @@
+.close-feedback, .close-callback {
+  z-index: 10000;
+  margin: 24px 0 0 16px;
+}
+
+.send-message, .order-callback {
+  margin-left: 168px;
+  height: 32px;
+  width: 136px;
+  background: $pink;
+  border-radius: 16px;
+}
+
+.feedback, .callback {
+  z-index: 2000;
+  position: fixed;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background: $bgColor;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 720px) {
+      width: 440px;
+    }
+}
+
+.feedback .feedback_title, .callback .callback_title {
+  margin: 40px 0 24px 0;
+  padding-left: 30px;
+
+  /*padding-bottom: 10px;*/
+  border-left: 3px solid $borderDriver;
+  transform: scale(1);
+  font-weight: bold;
+}
+
+.feedback input, .callback input, .warning-info {
+  width: 288px;
+  margin: 8px 16px;
+}
+
+.feedback input, .callback input {
+  border-radius: 8px;
+  background: $bgColor;
+  border: 1px solid $colorDiver;
+  height: 48px;
+  width: 288px;
+}
+
+.feedback .feedback__message-user {
+  height: 118px;
+}
+
+.warning-info__a {
+  color: $pink;
+}
+
+.feedback, .callback {
+  display: none;
+}
+
+.feedback::before, .callback::before {
+  content: '';
+  position: absolute;
+  width: calc(100%);
+  height: 120%;
+  box-shadow: 0 0 1120px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 720px) {
+  //.feedback {
+  //  width: 440px;
+  //}
+
+  .close-feedback, .close-callback {
+    position: absolute;
+    right: 473px;
+  }
+
+  .feedback input, .callback input, .warning-info {
+    width: 376px;
+    margin: 0 0 16px 30px;
+  }
+
+  .send-message, .order-callback {
+    margin-left: 271px;
+  }
+
+  .feedback input, .feedback__message-user {
+    width: 376px;
+  }
+
+  .callback {
+    //width: 440px;
+
+    input {
+      width: 376px;
+    }
+  }
+}

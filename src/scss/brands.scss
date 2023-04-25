@@ -1,0 +1,83 @@
+.content-companies {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: unset;
+  }
+}
+
+.title-brand, .title-services, .title-price {
+  ///*градиент*/
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 10px;
+  background: linear-gradient(270deg, $shadow 0%, $bgColor 98.61%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid $borderBrands;
+  justify-content: right;
+}
+
+.button-logo {
+  height: 72px;
+  width: 240px;
+  margin: 0 8px;
+  border-radius: 6px;
+  background: $bgColor;
+  border: 1px solid $colorDiver;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img {
+  /*центрирование по вертикали*/
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 16px 0 16px;
+}
+
+.wrapper-brands::before { /*тень*/
+  height: 72px;
+  width: 100%;
+}
+
+.swiper-pagination {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.wrapper {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.list-logo {
+  overflow: hidden;
+  height: 180px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-more, .show-less {
+  margin: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+.show-less__icon {
+  rotate: 180deg;
+}
+
+.show-more__icon, .show-less__icon {
+  margin-right: 7px;
+}
+
+.show-less {
+  display: none;
+}

@@ -1,0 +1,74 @@
+.content-services {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: unset;
+  }
+}
+
+.button-services {
+  height: 160px;
+  width: 224px;
+  border-radius: 6px;
+  background: $bgColor;
+  border: 1px solid $colorDiver;
+}
+
+.list-services {
+  overflow: hidden;
+  height: 175px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*стилизация кнопок ремонтов*/
+.button-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 8px;
+}
+
+.button-services__name {
+  /*span*/
+  margin: 16px;
+}
+
+.button-services__icon {
+  /*img*/
+  margin-left: 168px;
+  margin-bottom: 16px;
+}
+
+.wrapper-services::before {
+  height: 160px;
+  width: 100%;
+}
+
+.btn-less-services, .btn-more-services {
+  margin: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+.btn-less-services {
+  display: none;
+}
+
+/*точки сразу после слайдера*/
+
+.services {
+  .wrapper .swiper-container .swiper-pagination {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.wrapper {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+

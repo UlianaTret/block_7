@@ -1,0 +1,255 @@
+.full-menu {
+  display: none;
+}
+
+.full-menu {
+  z-index: 2000;
+  position: fixed;
+  left: 0;
+  width: 306px;
+  height: 100%;
+  background: $bgColor;
+}
+
+.list-menu__item {
+  .button {
+    border-color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    font-family: 'TT Lakes', serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    padding-left: 17px;
+    margin: 0 0 10px 0;
+  }
+
+  .active-button {
+    color: $colorTextFullMenu;
+    border-left: $borderDriver solid 3px;
+  }
+}
+
+.active-lang {
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $colorTextFullMenu;
+}
+
+.head-menu {
+  width: 100%;
+  background: $bgColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon-menu {
+  padding: 0 10px 0 0;
+  border-right: 2px solid $colorDiver;
+}
+
+.left-menu, .right-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-menu {
+  button {
+    /*width: 320px;*/
+    padding-bottom: 5px;
+  }
+}
+
+.additional-list, .lang {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 22px;
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: auto;
+
+  button {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding-right: 15px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 22px;
+  margin-bottom: 35px;
+
+  &__phone-number {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+  }
+
+  &__mail {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+}
+
+.list-menu__item {
+  @media screen and (max-height: 800px) {
+    margin: 0;
+    padding: 0;
+  }
+
+  span {
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  button:hover {
+    /*стили для списка меню*/
+    transition-duration: 0.5s;
+    border-left: 3px $borderDriver solid;
+    color: $colorTextFullMenu;
+    font-size: 40px;
+    height: 50px;
+  }
+}
+
+.lang {
+  span:hover {
+    /*стили для выбора языка*/
+    transition-duration: 1s;
+    opacity: 0.5;
+  }
+}
+
+.list-menu__item:hover {
+  button {
+    @media screen and (max-height: 800px) {
+      /*стили для списка меню*/
+      transition-duration: 0.5s;
+      border-left: 3px $borderDriver solid;
+      color: $colorTextFullMenu;
+      font-size: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.additional-list button, .head-menu li {
+  @media screen and (max-height: 800px) {
+    scale: 0.7;
+  }
+}
+
+
+.list-menu__item {
+  @media screen and (max-height: 600px) {
+    margin: 3px;
+    padding: 0;
+  }
+  @media screen and (max-height: 600px) {
+    height: 20px;
+  }
+}
+
+.additional-list button, .head-menu li {
+  @media screen and (max-height: 600px) {
+    scale: 0.5;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.bottom-menu, .contact, .lang {
+  @media screen and (max-height: 600px) {
+    scale: 0.9;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.additional-list {
+  @media screen and (max-height: 600px) {
+    height: 45px;
+  }
+}
+
+.active-button {
+  @media screen and (max-height: 600px) {
+    height: 25px;
+  }
+}
+
+.list-menu__item:hover {
+  button {
+    @media screen and (max-height: 600px) {
+      /*стили для списка меню*/
+      font-size: 20px;
+      height: 25px;
+    }
+  }
+}
+
+.full-menu {
+  @media screen and (min-width: 1440px) {
+    display: unset;
+    position: static;
+    width: 320px;
+    height: auto;
+    background: $bgColor;
+  }
+}
+
+.menu-opacity {
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.top-menu {
+  @media screen and (min-width: 1440px) {
+    position: fixed;
+    top: 0;
+    width: auto;
+  }
+}
+
+.list-menu {
+  @media screen and (min-width: 1440px) {
+    margin-top: 10px;
+  }
+}
+
+.list-menu__item {
+  @media screen and (min-width: 1440px) {
+    padding: 0;
+  }
+}
+
+.menu-icon {
+  @media screen and (min-width: 1440px) {
+    /*скрыть кнопку "убрать меню"*/
+    display: none;
+  }
+}
+
+.logo {
+  @media screen and (min-width: 1440px) {
+    margin-left: 22px;
+    margin-right: 120px;
+  }
+}

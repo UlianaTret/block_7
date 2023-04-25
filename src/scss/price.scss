@@ -1,0 +1,146 @@
+div {
+  .slide-price {
+    height: auto;
+    width: 300px;
+    background: $bgColor;
+    border-radius: 6px;
+    padding: 0 16px;
+  }
+}
+
+h4 {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $colorH4;
+  margin-top: 16px;
+}
+
+.slide-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 235px;
+  margin: 0 16px;
+}
+
+.slide-price {
+  div {
+    width: 230px;
+  }
+}
+
+.btn-order {
+  height: 32px;
+  width: 119px;
+  border-width: 0;
+  border-radius: 8px;
+  background: $pink;
+  position: relative;
+  left: 100px;
+  bottom: 10px;
+  @media screen and (min-width: 768px) {
+    position: static;
+  }
+}
+
+.name-btn {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'TT Lakes', sans-serif;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: $bgColor;
+  padding-right: 15px;
+}
+
+/*точки сразу после слайдера*/
+.price {
+  .wrapper .swiper-container .swiper-pagination {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.wrapper {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.wrapper-price::before {
+  height: 235px;
+  width: 100%;
+}
+
+/************ table ***********************/
+
+.table-position {
+  margin: 24px 5%;
+}
+
+.price-list {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: unset;
+  }
+}
+
+table {
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+.price-list {
+  tr {
+    /*стили таблицы*/
+    background: $bgColor;
+    border-radius: 6px;
+    width: 95%;
+    height: 50px;
+
+    td {
+      padding: 0 12px;
+      border-bottom: $shadow 3px solid;
+    }
+  }
+
+  .head-table {
+    background: $shadow;
+    border-bottom: $bgColor 3px solid;
+  }
+}
+
+td .btn-order {
+  /*выравнивание кнопки*/
+  margin: auto 16px;
+}
+
+/*********************************************/
+
+.conditions {
+  height: 137px;
+  width: 288px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: 0.2px;
+  color: $colorText;
+  padding: 0 16px;
+}
+
+.btn-get-commercial-offer {
+  &__icon {
+    height: 6px;
+  }
+}
+
+.btn-get-commercial-offer {
+  span {
+    padding: 0 9px 0 15px;
+  }
+}

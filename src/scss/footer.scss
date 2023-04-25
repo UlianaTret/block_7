@@ -1,0 +1,39 @@
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  padding: 83px 16px 0 16px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.teem-apesong, .privacy-policy, .public-offer {
+  color:$textNav;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+}
+
+.teem-apesong {
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.privacy-policy {
+  @media screen and (min-width: 768px) {
+    height: 16px;
+    width: 214px;
+  }
+}
+
+.public-offer {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+    width: 213px;
+  }
+}

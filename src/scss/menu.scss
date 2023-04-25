@@ -1,0 +1,212 @@
+.call, .chat, .profile {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: unset;
+  }
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.menu-mini {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: unset;
+  }
+}
+
+.title_copy {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 85.26%;
+  width: 100%;
+  border-radius: 0;
+  background: $bgColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $borderDriver;
+}
+
+.menu-icon__background {
+  padding: 0 10px 0 0;
+  border-right: 2px solid $colorDiver;
+}
+
+.left-menu, .right-menu {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+
+.menu-mini {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    padding: 18px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.menu-mini__button-repair {
+  @media screen and (min-width: 1440px) {
+    width: 200px;
+    font-family: 'TT Lakes', serif;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    @media screen and (min-width: 1440px) {
+      padding-right: 10px;
+    }
+  }
+}
+
+.menu-mini__button-status-repair {
+  @media screen and (min-width: 1440px) {
+    width: 200px;
+    font-family: 'TT Lakes', serif;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    @media screen and (min-width: 1440px) {
+      padding-right: 10px;
+    }
+  }
+}
+
+.copy-text {
+  padding-left: 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  border-left: 3px solid $borderDriver;
+  height: 40px;
+  width: 288px;
+  left: 16px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  color: $colorText;
+  @media screen and (min-width: 1440px) {
+    margin: 15px 0 10px 0;
+    border-left: 3px solid $borderDriver;
+  }
+}
+
+.slide-menu {
+  @media screen and (min-width: 1440px) {
+    height: 80px;
+    flex-wrap: wrap;
+  }
+
+  input {
+    white-space: nowrap;
+    padding: 5px 17px;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
+    height: 40px;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: $textNav;
+  }
+
+  width: auto;
+  height: auto;
+  padding: 10px 40px 10px 15px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /*Скрывает скролл в Firefox*/
+
+  &::before {
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: calc(100% - 15px);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slide-menu__item1 {
+    background: $bgColor;
+    border: 2px solid $btnBorderNav;
+    border-radius: 6px;
+  }
+  .slide-menu__item:hover {
+    background: $bgColor;
+    border: 2px solid $btnBorderNav;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+
+
+
+.slide-menu::before {
+  @media screen and (min-width: 768px) {
+    width: 98.3%;
+    display: none;
+  }
+}
+
+
+.menu, .slide-menu::before {
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+
+.slide-menu {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    margin: 10px 0;
+  }
+  @media screen and (min-width: 1440px) {
+    width: auto;
+    height: 90px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+
+.repair {
+  @media screen and (min-width: 768px) and (max-width: 1440px) {
+    padding-left: 10px;
+    border-left: 2px solid #EAEAEA;
+  }
+}
+
+

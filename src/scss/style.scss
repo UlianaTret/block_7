@@ -1,0 +1,233 @@
+$bgColor: #FFFFFF;
+$colorText: #1B1C21;
+$shadow: #F8F8F8;
+$pink: #FF3E79;
+$borderDriver: #41F6D7;
+$colorDiver: #EAEAEA;
+$textNav: #7E7E82;
+$hoverShadow: #7E7E82;
+$colorTextFullMenu: #7E7E82;
+$colorH4: #7E7E82;
+$btnBorderNav: #B8FFEC;
+$bgPage: #F8F8F8;
+$activeDot: #B5B6BC;
+$noActiveDot: #DDDDDD;
+$borderBrands: #D9FFF5;
+
+@font-face {
+  font-family: 'TT Lakes-Regular';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Regular.woff') format('woff'),
+  url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes-Medium';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Medium.woff') format('woff'),
+  url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes-Bold';
+  src: url('../fonts/TTLakes-Bold.eot');
+  src: url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Bold.woff') format('woff'),
+  url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  //, *:before, *:after
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background: $bgPage;
+  font-family: 'TT Lakes', serif;
+  font-weight: 300;
+  color: $colorText;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'TT Lakes', serif;
+  background-color: $bgColor;
+  color: $colorText;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.page {
+  background: $bgPage;
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.main-content {
+  @media screen and (min-width: 1440px) {
+    width: 1120px;
+  }
+}
+
+.button {
+  background: $bgColor;
+  border-color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  font-family: 'TT Lakes Regular', serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:hover {
+    transition-duration: 0.7s;
+    filter: opacity(80%);
+  }
+}
+
+button:hover, a:hover, input:hover {
+  cursor: pointer;
+}
+
+span {
+  font-family: 'TT Lakes', serif;
+}
+
+a {
+  text-decoration: none;
+  color: $colorText;
+  font-family: 'TT Lakes', serif;
+}
+
+span {
+  font-family: 'TT Lakes', serif;
+}
+
+li {
+  list-style-type: none;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+input {
+  cursor: pointer;
+  font-family: 'TT Lakes', serif;
+}
+
+h3 { /*.title-brand,.title-services, .title-price { */
+  margin: 16px;
+  /*выравнивание в градиенте*/
+  font-weight: normal;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  @media screen and (max-width: 350px) {
+    font-size: 17px;
+    //!important;
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+/*общие стили*/
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* кастом слайдера */
+.swiper-container::-webkit-scrollbar { /*скрыть скролл*/
+  display: none;
+}
+
+.swiper-container {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /*Скрывает скролл в Firefox*/
+}
+
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  &-bullet {
+    opacity: 1;
+    border: white solid 1px;
+    background-color: $noActiveDot;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 6px;
+
+    &-active {
+      background-color: $activeDot;
+    }
+  }
+}
+
+
+/*тень в слайдере (через псевдоэлемент)*/
+.wrapper::before, .slide-menu::before {
+  content: '';
+  position: absolute;
+  -webkit-box-shadow: -47px 0 13px -8px $shadow inset;
+  -moz-box-shadow: -47px 0 13px -8px $shadow inset;
+  box-shadow: -47px 0 13px -8px $shadow inset;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.swiper-container::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-container {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.wrapper::before, .slide-menu::before {
+  content: '';
+  position: absolute;
+  -webkit-box-shadow: -47px 0 13px -8px $shadow inset;
+  -moz-box-shadow: -47px 0 13px -8px $shadow inset;
+  box-shadow: -47px 0 13px -8px $shadow inset;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* конец кастома слайдера*/
+
+@import "about_company";
+@import "brands";
+@import "feedback_and_callback";
+@import "full_menu";
+@import "menu";
+@import "opacity";
+@import "price";
+@import "services";
+@import "footer";
