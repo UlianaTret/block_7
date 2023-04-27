@@ -20,8 +20,8 @@
         <div class='head-menu'>
           <ul class='left-menu'>
             <li class='menu-icon'>
-              <button id='btn-close-menu' type='button' class='menu-icon__button button'>
-                <img class='icon-menu' alt='Закрыть меню' src='./src/img/burgerclose.svg'>
+              <button id='btn-close-menu' type='button' class='close-full-menu button'>
+                <img class='close-full-menu__icon' alt='Закрыть меню' src='./src/img/burgerclose.svg'>
               </button>
             </li>
             <li class='logo'>
@@ -137,10 +137,10 @@
       <div class='feedback-opacity'></div>
       <h3 class='feedback_title'>Обратная связь</h3>
       <label class='form-feedback'>
-        <input class='feedback__name-user' type='text' placeholder='  Имя' required>
-        <input class='feedback__phone-user' type='tel' placeholder='  Телефон' required>
-        <input class='feedback__email-user' type='email' placeholder='  Электронная почта' required>
-        <input class='feedback__message-user' type='text' placeholder='  Сообщение' required>
+        <input class='feedback__name-user' type='text' placeholder='Имя' required>
+        <input class='feedback__phone-user' type='tel' placeholder='Телефон' required>
+        <input class='feedback__email-user' type='email' placeholder='Электронная почта' required>
+        <input class='feedback__message-user' type='text' placeholder='Сообщение' required>
         <p class='warning-info'>
           Нажимая “отправить”, вы даете согласие на <a class='warning-info__a' href=''>обработку персональных
           данных</a>
@@ -163,7 +163,7 @@
       <div class='callback-opacity'></div>
       <h3 class='callback_title'>Заказать звонок</h3>
       <label class='form-callback'>
-        <input class='callback__phone-user' type='tel' placeholder='  Телефон' required>
+        <input class='callback__phone-user' type='tel' placeholder='Телефон' required>
         <p class='warning-info'>
           Нажимая “отправить”, вы даете согласие на <a class='warning-info__a' href=''>обработку персональных
           данных</a>
@@ -182,8 +182,8 @@
       <div class='menu'>
         <ul class='left-menu'>
           <li class='menu-icon'>
-            <button id='btn-menu' type='button' class='menu-icon__button button'>
-              <img class='menu-icon__background' alt='Основное меню' src='./src/img/burger.svg'>
+            <button id='btn-menu' type='button' class='show-full-menu button'>
+              <img class='show-full-menu__icon' alt='Основное меню' src='./src/img/burger.svg'>
             </button>
           </li>
           <li class='logo'>
@@ -240,7 +240,7 @@
       <nav class='slide-menu'>
         <input type='button' class='slide-menu__item1' value='Ремонтируемые устройства'>
         <div class='slide-menu__opacity'></div>
-        <!--        <input class="slide-menu__item" type="button" value="Дополнительные услуги">-->
+        <input class="slide-menu__item" type="button" value="Дополнительные услуги">
         <input class='slide-menu__item' type='button' value='Ремонтируемые бренды'>
         <input class='slide-menu__item' type='button' value='Цены на услуги'>
         <input class='slide-menu__item' type='button' value='Адреса сервисных центров'>
@@ -621,7 +621,6 @@
         <!--    таблица для планшетов и ПК-->
         <div class='table-position'>
           <table class='price-list'>
-            <!--                        <tbody>-->
             <tr class='head-table'>
               <td>Ремонтные услуги</td>
               <td>Цена</td>
@@ -688,7 +687,6 @@
                 </button>
               </td>
             </tr>
-            <!--                        </tbody>-->
           </table>
         </div>
         <p class='conditions'>

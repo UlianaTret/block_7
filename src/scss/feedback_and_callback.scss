@@ -28,8 +28,6 @@
 .feedback .feedback_title, .callback .callback_title {
   margin: 40px 0 24px 0;
   padding-left: 30px;
-
-  /*padding-bottom: 10px;*/
   border-left: 3px solid $borderDriver;
   transform: scale(1);
   font-weight: bold;
@@ -38,6 +36,7 @@
 .feedback input, .callback input, .warning-info {
   width: 288px;
   margin: 8px 16px;
+  padding: 16px 12px;
 }
 
 .feedback input, .callback input {
@@ -47,9 +46,8 @@
   height: 48px;
   width: 288px;
 }
-
 .feedback .feedback__message-user {
-  height: 118px;
+  padding: 12px 0 82px 16px;
 }
 
 .warning-info__a {
@@ -92,8 +90,6 @@
   }
 
   .callback {
-    //width: 440px;
-
     input {
       width: 376px;
     }

@@ -76,7 +76,6 @@ body {
   }
 }
 
-
 .page {
   background: $bgPage;
   @media screen and (min-width: 1440px) {
@@ -222,12 +221,12 @@ h3 { /*.title-brand,.title-services, .title-price { */
 
 /* конец кастома слайдера*/
 
-@import "about_company";
-@import "brands";
-@import "feedback_and_callback";
-@import "full_menu";
-@import "menu";
-@import "opacity";
-@import "price";
-@import "services";
-@import "footer";
+@import "./about_company";
+@import "./brands";
+@import "./feedback_and_callback";
+@import "./full_menu";
+@import "./menu";
+@import "./opacity";
+@import "./price";
+@import "./services";
+@import "./footer";
