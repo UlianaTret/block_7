@@ -12,31 +12,29 @@
 
     
     <div id="full-menu" class="full-menu">
-      <div class="top-menu">
-        <div class="head-menu">
-          <ul class="left-menu">
-            <li class="menu-icon">
-              <button id="btn-close-menu" type="button" class="close-full-menu button">
-                <img class="close-full-menu__icon" alt="Закрыть меню" src="./img/burgerclose.svg">
-              </button>
-            </li>
-            <li class="logo">
-              <a class="logo__icon" href="index.html">
-                <img alt="Логотип компании" src="./img/GroupLogo.svg">
-              </a>
-            </li>
-          </ul>
-          <div class="menu-opacity"></div>
-
-          <ul class="right-menu">
-            <li>
-              <button class="search button">
-                <img class="search__icon" alt="Проверить статус ремента" src="./img/search.svg">
-              </button>
-            </li>
-          </ul>
+      <div class="head-menu">
+        <ul class="left-menu">
+          <li class="menu-icon">
+            <button id="btn-close-menu" type="button" class="close-full-menu button">
+              <img class="close-full-menu__icon" alt="Закрыть меню" src="./img/burgerclose.svg">
+            </button>
+          </li>
+          <li class="logo">
+            <a class="logo__icon" href="index.html">
+              <img alt="Логотип компании" src="./img/GroupLogo.svg">
+            </a>
+          </li>
+        </ul>
+        <div class="menu-opacity"></div>
+        <div class="right-menu">
+          <li>
+            <button class="search button">
+              <img class="search__icon" alt="Проверить статус ремента" src="./img/search.svg">
+            </button>
+          </li>
         </div>
-
+      </div>
+      <div class="middle-menu">
         <ul class="list-menu">
           <li class="list-menu__item">
             <button type="button" class="list-menu__button-repair active-button button">
@@ -80,8 +78,6 @@
           </li>
         </ul>
       </div>
-
-
       <div class="bottom-menu">
         <div class="additional-menu">
           <ul class="additional-list">
@@ -126,12 +122,12 @@
 
     
     <div id="feedback" class="feedback">
-      <button id="feedback-close" class="close-feedback button">
-        <img class="feedback-close__icon" alt="Закрыть окно с обратной связью" src="./img/burgerclose.svg">
-      </button>
-      <div class="feedback-opacity"></div>
-      <h3 class="feedback_title">Обратная связь</h3>
-      <label class="form-feedback">
+      <div class="content">
+        <button id="feedback-close" class="close-feedback button">
+          <img class="feedback-close__icon" alt="Закрыть окно с обратной связью" src="./img/burgerclose.svg">
+        </button>
+        <div class="feedback-opacity"></div>
+        <span class="feedback_title">Обратная связь</span>
         <input class="feedback__name-user" type="text" placeholder="Имя" required>
         <input class="feedback__phone-user" type="tel" placeholder="Телефон" required>
         <input class="feedback__email-user" type="email" placeholder="Электронная почта" required>
@@ -144,18 +140,18 @@
         <button class="send-message button">
           <span class="name-btn">Отправить</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Отправить">
         </button>
-      </label>
+      </div>
     </div>
     
 
     
     <div id="callback" class="callback">
-      <button id="callback-close" class="close-callback button">
-        <img class="callback-close__icon" alt="Закрыть окно с заказом ораного звонка" src="./img/burgerclose.svg">
-      </button>
-      <div class="callback-opacity"></div>
-      <h3 class="callback_title">Заказать звонок</h3>
-      <label class="form-callback">
+      <div class="content">
+        <button id="callback-close" class="close-callback button">
+          <img class="callback-close__icon" alt="Закрыть окно с заказом ораного звонка" src="./img/burgerclose.svg">
+        </button>
+        <div class="callback-opacity"></div>
+        <span class="callback_title">Заказать звонок</span>
         <input class="callback__phone-user" type="tel" placeholder="Телефон" required>
         <p class="warning-info">
           Нажимая “отправить”, вы даете согласие на <a class="warning-info__a" href="">обработку персональных
@@ -165,7 +161,7 @@
         <button class="order-callback button">
           <span class="name-btn">Отправить</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Отправить">
         </button>
-      </label>
+      </div>
     </div>
     
 
@@ -248,6 +244,14 @@
             партнера, что подтверждает большое количество постоянных клиентов.
             Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
             очередь, советуют нас родным и близким.
+            <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div class="btn-more-less">
             <button id="btn-more-info" type="button" class="read-more button">
@@ -268,7 +272,7 @@
 
       <div class="brands">
         <div class="title-brand">
-          <h3>Ремонт техники различных брендов</h3>
+          <span class="topic">Ремонт техники различных брендов</span>
         </div>
 
         <div class="wrapper wrapper-brands">
@@ -429,7 +433,7 @@
 
       <div class="services">
         <div class="title-services">
-          <h3>Ремонт различных видов техники</h3>
+          <span class="topic">Ремонт различных видов техники</span>
         </div>
 
         <div class="wrapper wrapper-services">
@@ -509,7 +513,7 @@
 
       <div class="price">
         <div class="title-price">
-          <h3>Цены на услуги</h3>
+          <span class="topic">Цены на услуги</span>
         </div>
         <div class="wrapper wrapper-price">
           
@@ -517,11 +521,11 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide slide-price">
                 <div>
-                  <h4 class="services">Ремонтные услуги</h4>
+                  <span class="topic-card">Ремонтные услуги</span>
                   <span class="services__name">Диагностика</span>
-                  <h4 class="price">Цена</h4>
+                  <span class="topic-card">Цена</span>
                   <span class="price-value">Бесплатно</span>
-                  <h4 class="deadline">Срок</h4>
+                  <span class="topic-card">Срок</span>
                   <span class="deadline-value">30 мин</span>
                 </div>
                 <button type="button" class="btn-order">
@@ -531,11 +535,11 @@
               </div>
               <div class="swiper-slide slide-price">
                 <div>
-                  <h4 class="services">Ремонтные услуги</h4>
+                  <h4 class="topic-card">Ремонтные услуги</h4>
                   <span class="services__name">Замена дисплея</span>
-                  <h4 class="price">Цена</h4>
+                  <h4 class="topic-card">Цена</h4>
                   <span class="price-value">1 000 ₽</span>
-                  <h4 class="deadline">Срок</h4>
+                  <h4 class="topic-card">Срок</h4>
                   <span class="deadline-value">30-120 мин</span>
                 </div>
                 <button type="button" class="btn-order">
@@ -544,11 +548,11 @@
               </div>
               <div class="swiper-slide slide-price">
                 <div>
-                  <h4 class="services">Ремонтные услуги</h4>
+                  <h4 class="topic-card">Ремонтные услуги</h4>
                   <span class="services__name">Замена полифонического динамика</span>
-                  <h4 class="price">Цена</h4>
+                  <h4 class="topic-card">Цена</h4>
                   <span class="price-value">1 000 ₽</span>
-                  <h4 class="deadline">Срок</h4>
+                  <h4 class="topic-card">Срок</h4>
                   <span class="deadline-value">30-120 мин</span>
                 </div>
                 <button type="button" class="btn-order">
@@ -557,11 +561,11 @@
               </div>
               <div class="swiper-slide slide-price">
                 <div>
-                  <h4 class="services">Ремонтные услуги</h4>
+                  <h4 class="topic-card">Ремонтные услуги</h4>
                   <span class="services__name">Тестирование с выдачей технического заключения</span>
-                  <h4 class="price">Цена</h4>
+                  <h4 class="topic-card">Цена</h4>
                   <span class="price-value">1 000 ₽</span>
-                  <h4 class="deadline">Срок</h4>
+                  <h4 class="topic-card">Срок</h4>
                   <span class="deadline-value">30-120 мин</span>
                 </div>
                 <button type="button" class="btn-order">
@@ -570,11 +574,11 @@
               </div>
               <div class="swiper-slide slide-price">
                 <div>
-                  <h4 class="services">Ремонтные услуги</h4>
+                  <h4 class="topic-card">Ремонтные услуги</h4>
                   <span class="services__name">Замена программного обеспечения</span>
-                  <h4 class="price">Цена</h4>
+                  <h4 class="topic-card">Цена</h4>
                   <span class="price-value">1 000 ₽</span>
-                  <h4 class="deadline">Срок</h4>
+                  <h4 class="topic-card">Срок</h4>
                   <span class="deadline-value">30-120 мин</span>
                 </div>
                 <button type="button" class="btn-order">
@@ -588,76 +592,80 @@
         
         <div class="table-position">
           <table class="price-list">
+            <thead>
             <tr class="head-table">
-              <td>Ремонтные услуги</td>
-              <td>Цена</td>
-              <td>Срок</td>
-              <td></td>
+              <td class="head-table_service">Ремонтные услуги</td>
+              <td class="head-table_price">Цена</td>
+              <td class="head-table_deadline">Срок</td>
+              <td class="head-table_order"></td>
             </tr>
-            <tr>
-              <td>Диагностика</td>
-              <td>Бесплатно</td>
-              <td>30 мин</td>
-              <td>
+            </thead>
+            <tbody>
+            <tr class="tbody">
+              <td class="tbody_service">Диагностика</td>
+              <td class="tbody_price">Бесплатно</td>
+              <td class="tbody_deadline">30 мин</td>
+              <td class="tbody_order">
                 <button type="button" class="btn-order">
                   <span class="name-btn">Заказать</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Заказать">
                 </button>
               </td>
             </tr>
-            <tr>
-              <td>Замена дисплея</td>
-              <td>1 000 ₽</td>
-              <td>30-120 мин</td>
-              <td>
+            <tr class="tbody">
+              <td class="tbody_service">Замена дисплея</td>
+              <td class="tbody_price">1 000 ₽</td>
+              <td class="tbody_deadline">30-120 мин</td>
+              <td class="tbody_order">
                 <button type="button" class="btn-order">
                   <span class="name-btn">Заказать</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Заказать">
                 </button>
               </td>
             </tr>
-            <tr>
-              <td>Замена полифонического динамика</td>
-              <td>1 000 ₽</td>
-              <td>30-120 мин</td>
-              <td>
+            <tr class="tbody">
+              <td class="tbody_service">Замена полифонического динамика</td>
+              <td class="tbody_price">1 000 ₽</td>
+              <td class="tbody_deadline">30-120 мин</td>
+              <td class="tbody_order">
                 <button type="button" class="btn-order">
                   <span class="name-btn">Заказать</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Заказать">
                 </button>
               </td>
             </tr>
-            <tr>
-              <td>Тестирование с выдачей технического заключения</td>
-              <td>1 000 ₽</td>
-              <td>30-120 мин</td>
-              <td>
+            <tr class="tbody">
+              <td class="tbody_service">Тестирование с выдачей технического заключения</td>
+              <td class="tbody_price">1 000 ₽</td>
+              <td class="tbody_deadline">30-120 мин</td>
+              <td class="tbody_order">
                 <button type="button" class="btn-order">
                   <span class="name-btn">Заказать</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Заказать">
                 </button>
               </td>
             </tr>
-            <tr>
-              <td>Замена программного обеспечения</td>
-              <td>1 000 ₽</td>
-              <td>30-120 мин</td>
-              <td>
+            <tr class="tbody">
+              <td class="tbody_service">Замена программного обеспечения</td>
+              <td class="tbody_price">1 000 ₽</td>
+              <td class="tbody_deadline">30-120 мин</td>
+              <td class="tbody_order">
                 <button type="button" class="btn-order">
                   <span class="name-btn">Заказать</span><img class="btn-order__icon" src="./img/dropdown.svg" alt="Заказать">
                 </button>
               </td>
             </tr>
+            </tbody>
           </table>
         </div>
         <p class="conditions">
           Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
           Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
         </p>
-        <button id="btn-get-commercial-offer" type="button" class="btn-get-commercial-offer button btn">
-          <span>Получить коммерческое предложение</span><img class="btn-get-commercial-offer__icon" src="./img/Line.svg" alt="Скрыть">
-        </button>
+        <a class="btn-get-commercial-offer">
+          Получить коммерческое предложение<img class="btn-get-commercial-offer__icon" src="./img/Line.svg" alt="Скрыть">
+        </a>
       </div>
 
       <div class="footer-info">
         <span class="teem-apesong">© 2019 CPS<br>Разработано командой Apesong</span>
-        <span class="privacy-policy">Политика конфиденциальности</span>
+        <a class="privacy-policy" href="">Политика конфиденциальности</a>
         <span class="public-offer">Информация, размещенная на данной странице, не является публичной офертой</span>
       </div>
     </div>
