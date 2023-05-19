@@ -1,16 +1,30 @@
 .footer-info {
   display: flex;
   flex-direction: column;
-  padding: 83px 16px 0 16px;
   text-align: center;
+  border-top: $borderDriver 1px solid;
+  //height: 147px;
+  margin-top: 40px;
+  padding: 16px 0 0 19px;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
+    height: 105px;
+    margin-top: 47px;
+    padding: 32px 24px 24px 25px;
+  }
+  @media screen and (max-width: 1440px) {
+    height: 85px;
+    //margin-top: 50px;
+    //margin-bottom: 21px;
+    padding: 32px 33px 31px 19px;
   }
 }
 
 .teem-apesong, .privacy-policy, .public-offer {
-  color:$textNav;
+  color: $textNav;
+  padding-bottom: 16px;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 16px;
@@ -32,8 +46,16 @@
 }
 
 .public-offer {
-  @media screen and (min-width: 768px) {
+  width: 312px;
+  margin: auto;
+  @media screen and (min-width: 768px) and (max-width: 1440px) {
+    margin: 0;
     text-align: right;
     width: 213px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+    width: 330px;
+    text-align: right;
   }
 }

@@ -8,8 +8,8 @@ div {
   }
 }
 
-h4 {
-  font-family: 'TT Lakes', sans-serif;
+.topic-card { /*заголовки в карточках*/
+  font-family: 'TT Lakes-Regular', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 16px;
@@ -17,6 +17,13 @@ h4 {
   text-align: left;
   color: $colorH4;
   margin-top: 16px;
+  /////////////
+  height: 16px;
+
+  opacity: 0.72;
+  width: 126px;
+  text-align: left;
+
 }
 
 .slide-price {
@@ -25,11 +32,11 @@ h4 {
   justify-content: space-between;
   height: 235px;
   margin: 0 16px;
-}
 
-.slide-price {
   div {
     width: 230px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -52,7 +59,7 @@ h4 {
   line-height: 24px;
   font-weight: bold;
   text-align: right;
-  font-family: 'TT Lakes', sans-serif;
+  font-family: 'TT Lakes-Regular', sans-serif;
   letter-spacing: -0.15px;
   text-transform: uppercase;
   color: $bgColor;
@@ -61,9 +68,14 @@ h4 {
 
 /*точки сразу после слайдера*/
 .price {
-  .wrapper .swiper-container .swiper-pagination {
-    right: 50%;
-    transform: translateX(50%);
+  .wrapper {
+    .swiper-container {
+      .swiper-pagination {
+        right: 50%;
+        transform: translateX(50%);
+        margin: 8px;
+      }
+    }
   }
 }
 
@@ -72,6 +84,13 @@ h4 {
     display: none;
   }
 }
+
+.wrapper-price {
+  //height: 260px;
+  margin: 16px 0 44px 0;
+  //padding: 0 16px 0 16px;
+}
+
 .wrapper-price::before {
   height: 235px;
   width: 100%;
@@ -81,66 +100,119 @@ h4 {
 
 .table-position {
   margin: 24px 5%;
-}
-
-.price-list {
   display: none;
   @media screen and (min-width: 768px) {
-    display: unset;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-table {
-  margin: 10px auto;
-  border-collapse: collapse;
-}
-
 .price-list {
+  border-collapse: collapse;
   tr {
-    /*стили таблицы*/
-    background: $bgColor;
-    border-radius: 6px;
-    width: 95%;
-    height: 50px;
+    height: 64px;
+  }
+  td {
+    margin-left: 16px;
+  }
+  thead {
+    background-color: $shadow;
+    border-right: $shadow 16px solid;
+    border-left: $shadow 16px solid;
+    font-family: 'TT Lakes-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: $topicColor;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+  }
+  .head-table { // ширина столбцов
+    &_service {
+      width: 50%;
+    }
 
-    td {
-      padding: 0 12px;
-      border-bottom: $shadow 3px solid;
+    &_price {
+      width: 15%;
+    }
+
+    &_deadline {
+      width: 15%;
+    }
+
+    &_order {
+      width: 20%;
     }
   }
 
-  .head-table {
-    background: $shadow;
-    border-bottom: $bgColor 3px solid;
-  }
-}
+  tbody{ //полоски не до конца
+    background-color: $bgColor;
+    border-right: $bgColor 16px solid;
+    border-left: $bgColor 16px solid;
 
-td .btn-order {
-  /*выравнивание кнопки*/
-  margin: auto 16px;
+    font-family: 'TT Lakes-Regular';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $colorText;
+  }
+
+  .tbody { //цвет полосок
+    border-bottom: $colorDiver 1px solid; //$shadow
+    &:last-child {
+      border-bottom: $bgColor 1px solid;
+    }
+    .tbody_order {
+      text-align: center;
+      .btn-order {
+        border-radius: 16px;
+      }
+    }
+  }
+
 }
 
 /*********************************************/
 
 .conditions {
-  height: 137px;
+  height: 138px;
   width: 288px;
   font-size: 14px;
   line-height: 20px;
   text-align: left;
   letter-spacing: 0.2px;
   color: $colorText;
-  padding: 0 16px;
-}
-
-.btn-get-commercial-offer {
-  &__icon {
-    height: 6px;
+  //padding: 0 16px;
+  margin: 44px 16px 0 16px;
+  @media screen and (min-width: 768px) {
+    width: 421px;
+    height: 60px;
+    margin-left: 26px;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-left: 32px;
+    margin-bottom: 10px;
   }
 }
 
 .btn-get-commercial-offer {
-  span {
-    padding: 0 9px 0 15px;
+  margin: 0 9px 0 16px;
+  font-family: 'TT Lakes-Regular';
+  font-weight: 600;
+  @media screen and (min-width: 768px) {
+    width: 421px;
+    height: 60px;
+    margin-left: 26px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-left: 32px;
+  }
+
+  &__icon {
+    //height: 6px;
+    //width: 10px;
+    padding-left: 9px;
+    //padding-bottom: 3px;
+    scale: 0.9;
   }
 }

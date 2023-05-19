@@ -8,26 +8,7 @@
   }
 }
 
-.menu-mini {
-  display: none;
-  @media screen and (min-width: 1440px) {
-    display: unset;
-  }
-}
-
-.title_copy {
-  @media screen and (min-width: 1440px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
 .menu {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 85.26%;
   width: 100%;
   border-radius: 0;
   background: $bgColor;
@@ -36,8 +17,16 @@
   justify-content: space-between;
   border-bottom: 1px solid $borderDriver;
 }
+//иконки в меню
+.show-full-menu, .call, .chat, .profile, .repair, .status-repair{ /*.logo__icon*/
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-.menu-icon__background {
+
+.show-full-menu {
+  margin-left: 8px;
   padding: 0 10px 0 0;
   border-right: 2px solid $colorDiver;
 }
@@ -48,63 +37,16 @@
   margin: auto 0;
 }
 
-.menu-mini {
-  display: none;
-  @media screen and (min-width: 1440px) {
-    padding: 18px;
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.menu-mini__button-repair {
-  @media screen and (min-width: 1440px) {
-    width: 200px;
-    font-family: 'TT Lakes', serif;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  span {
-    @media screen and (min-width: 1440px) {
-      padding-right: 10px;
-    }
-  }
-}
-
-.menu-mini__button-status-repair {
-  @media screen and (min-width: 1440px) {
-    width: 200px;
-    font-family: 'TT Lakes', serif;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  span {
-    @media screen and (min-width: 1440px) {
-      padding-right: 10px;
-    }
-  }
-}
-
 .copy-text {
-  padding-left: 15px;
-  margin-top: 15px;
+  font-family: "TT Lakes-Bold";
+  height: 40px;
+  font-size: 28px;
+  line-height: 40px;
+  padding-left: 20px;
+  margin: 24px 0 32px 0;
   display: flex;
   flex-direction: row;
   border-left: 3px solid $borderDriver;
-  height: 40px;
-  width: 288px;
-  left: 16px;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 40px;
   letter-spacing: -0.6px;
   color: $colorText;
   @media screen and (min-width: 1440px) {
@@ -114,9 +56,25 @@
 }
 
 .slide-menu {
-  @media screen and (min-width: 1440px) {
+  width: auto;
+  height: auto;
+  //padding: 10px 40px 10px 15px;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /*Скрывает скролл в Firefox*/
+  @media screen and (min-width: 768px) {
     height: 80px;
+    padding-left: 17px;
     flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-left: 24px;
+    margin: 0 34px;
   }
 
   input {
@@ -134,22 +92,11 @@
     color: $textNav;
   }
 
-  width: auto;
-  height: auto;
-  padding: 10px 40px 10px 15px;
-  display: flex;
-  flex-direction: row;
-  overflow-y: auto;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  /*Скрывает скролл в Firefox*/
-
   &::before {
     padding: 0;
     margin: 0;
     height: 50px;
-    width: calc(100% - 15px);
+    width: calc(100% - 24px); //15px
   }
 
   &::-webkit-scrollbar {
@@ -169,23 +116,11 @@
   }
 }
 
-
-
-
-.slide-menu::before {
-  @media screen and (min-width: 768px) {
-    width: 98.3%;
-    display: none;
-  }
-}
-
-
 .menu, .slide-menu::before {
   @media screen and (min-width: 1440px) {
     display: none;
   }
 }
-
 
 .slide-menu {
   @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -201,12 +136,9 @@
   }
 }
 
-
 .repair {
   @media screen and (min-width: 768px) and (max-width: 1440px) {
     padding-left: 10px;
     border-left: 2px solid #EAEAEA;
   }
 }
-
-

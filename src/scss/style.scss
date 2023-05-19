@@ -13,6 +13,8 @@ $bgPage: #F8F8F8;
 $activeDot: #B5B6BC;
 $noActiveDot: #DDDDDD;
 $borderBrands: #D9FFF5;
+$topicColor: #7E7E82;
+$warnigText: #7E7E82;
 
 @font-face {
   font-family: 'TT Lakes-Regular';
@@ -58,7 +60,7 @@ html {
   padding: 0;
   min-width: 320px;
   background: $bgPage;
-  font-family: 'TT Lakes', serif;
+  font-family: 'TT Lakes-Regular', serif;
   font-weight: 300;
   color: $colorText;
 }
@@ -66,7 +68,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'TT Lakes', serif;
+  font-family: 'TT Lakes-Regular', serif;
   background-color: $bgColor;
   color: $colorText;
   @media screen and (min-width: 1440px) {
@@ -97,7 +99,7 @@ body {
   background: $bgColor;
   border-color: rgba(0, 0, 0, 0);
   background: rgba(0, 0, 0, 0);
-  font-family: 'TT Lakes Regular', serif;
+  font-family: 'TT Lakes-Regular', serif;
   font-size: 16px;
   line-height: 24px;
 
@@ -112,17 +114,17 @@ button:hover, a:hover, input:hover {
 }
 
 span {
-  font-family: 'TT Lakes', serif;
+  font-family: 'TT Lakes-Regular', serif;
 }
 
 a {
   text-decoration: none;
   color: $colorText;
-  font-family: 'TT Lakes', serif;
+  font-family: 'TT Lakes-Regular', serif;
 }
 
 span {
-  font-family: 'TT Lakes', serif;
+  font-family: 'TT Lakes-Regular', serif;
 }
 
 li {
@@ -133,17 +135,31 @@ li {
 
 input {
   cursor: pointer;
-  font-family: 'TT Lakes', serif;
+  font-family: 'TT Lakes-Regular', serif;
 }
 
-h3 { /*.title-brand,.title-services, .title-price { */
-  margin: 16px;
+.topic { /*.title-brand,.title-services, .title-price { */
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $topicColor;
+
+
+  padding: 16px;
   /*выравнивание в градиенте*/
   font-weight: normal;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   @media screen and (max-width: 350px) {
     font-size: 17px;
     //!important;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 16px 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 16px 32px;
   }
 }
 
@@ -195,6 +211,9 @@ h3 { /*.title-brand,.title-services, .title-price { */
   -webkit-box-shadow: -47px 0 13px -8px $shadow inset;
   -moz-box-shadow: -47px 0 13px -8px $shadow inset;
   box-shadow: -47px 0 13px -8px $shadow inset;
+  //  -webkit-box-shadow: -47px 0 13px -8px red inset; //$shadow
+  //  -moz-box-shadow: -47px 0 13px -8px red inset;
+  //  box-shadow: -47px 0 13px -8px red inset;
   z-index: 100;
   pointer-events: none;
 }
@@ -209,16 +228,6 @@ h3 { /*.title-brand,.title-services, .title-price { */
   scrollbar-width: none;
 }
 
-.wrapper::before, .slide-menu::before {
-  content: '';
-  position: absolute;
-  -webkit-box-shadow: -47px 0 13px -8px $shadow inset;
-  -moz-box-shadow: -47px 0 13px -8px $shadow inset;
-  box-shadow: -47px 0 13px -8px $shadow inset;
-  z-index: 100;
-  pointer-events: none;
-}
-
 /* конец кастома слайдера*/
 
 @import "./about_company";
@@ -226,6 +235,7 @@ h3 { /*.title-brand,.title-services, .title-price { */
 @import "./feedback_and_callback";
 @import "./full_menu";
 @import "./menu";
+@import "./mini_menu";
 @import "./opacity";
 @import "./price";
 @import "./services";

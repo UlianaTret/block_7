@@ -11,9 +11,13 @@
 .block {
   display: flex;
   flex-direction: column;
-  margin: 0 15px;
+  margin: 0 16px;
   @media screen and (min-width: 768px) {
+    margin: 0 24px;
     width: 65%;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 0 32px;
   }
 }
 
@@ -37,20 +41,16 @@
   transform: rotate(180deg);
 }
 
-.read-more {
+.read-more, .read-less {
   margin: 8px 0;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  font-weight: 600;
   text-align: left;
 }
 
 .read-less {
-  margin: 8px 0;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-align: left;
   display: none;
 }
 
@@ -58,8 +58,8 @@
   width: 100%;
   height: auto;
   border-radius: 6px;
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
-    margin: 30px 10px;
+  @media screen and (min-width: 768px){// and (max-width: 1440px) {
+    margin: 0 10px;
     width: 94%;
     height: auto;
     border-radius: 6px;
